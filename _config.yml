@@ -1,8 +1,9 @@
 title: Switch2OSM
 description: >
-  Switch to OpenStreetMap and discover how you can build beautiful maps from the world’s best map data.
+  Переходьте на OpenStreetMap та дізнайтесь як ви можете робити чудові мапи
+  з найповніших даних, зібраних по всьому світу.
 baseurl: "/switch2osm" # the subpath of your site, e.g. /blog
-copyright: 2013–2020 OpenStreetMap and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA</a>
+copyright: 2013–2020 OpenStreetMap та його учасникі, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA</a>
 url: ""
 github_username: osm-ua
 
@@ -19,19 +20,19 @@ exclude:
   - vendor
 
 menu:
-  - title: Why Switch?
+  - title: Навіщо?
     url: /why-switch/
-  - title: Case Studies
+  - title: Відгуки
     url: /case-studies/
-  - title: The Basics
+  - title: Основи
     url: /the-basics/
-  - title: Using Tiles
+  - title: Мапа
     url: /using-tiles/
-  - title: Serving Tiles
+  - title: Власний сервер
     url: /serving-tiles/
-  - title: Other Uses
+  - title: Що ще?
     url: /other-uses/
-  - title: Providers
+  - title: Постачальники
     url: /providers/
-  - title: Find Out More
+  - title: Дізнатися більше
     url: /find-out-more/
