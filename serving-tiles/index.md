@@ -1,40 +1,41 @@
 ---
 layout: docs
-title: Serving Tiles
+title: Робимо власні тайли
 permalink: /serving-tiles/
 ---
 
-Tiles from a third-party provider are the simplest way to make the switch to OpenStreetMap, and offer clarity of cost. However, if you’d like to take full control of your destiny, you can render and serve your own tiles. This section explains how.
+Тайли від стороніх постачальників – це найпростіший спосіб переходу на OpenStreetMap, до того ж він дозволяє точно виміряти ваші витрати. Однак, якщо ви бажаєте мати повний контроль над долею, ви можете створювати та розповсюджувати ваші власні тайли. В цьому розділі йдеться про те, як це зробити.
 
 ![](serving-tiles.png)
 
-# Is it for you?
+# Ви точно цього бажаєте?
 
-Both generating and serving tiles incur significant hardware requirements, especially if you need global coverage and regular updates.
+І генерація тайлів, і їх розповсюдження вимагають наявності доволі потужногно обладнання, особливо, якщо вам треба мати глобальне покриття та регулярні оновлення.
 
-If you are setting up your own tile server, we recommend that you use [Ubuntu Linux](http://www.ubuntu.com/).
+Для розгортання власного тайлового сервера ми радимо використовувати [Ubuntu Linux](http://www.ubuntu.com/).
 
-# The options
+# Варіанти
 
-1. [Build a tile server from source](manually-building-a-tile-server-18-04-lts/)
-2. [Build a tile server using packages](building-a-tile-server-from-packages/)
+1.  [Створення тайлового сервера з сирців](manually-building-a-tile-server-18-04-lts/)
+2.  [Розгортання тайлового сервера з пакунків](building-a-tile-server-from-packages/)
 
-# System requirements
-Serving your own maps is a fairly intensive task. Depending on the size of the area you’re interested in serving and the traffic you expect the system requirements will vary. In general, requirements will range from 10-20GB of storage, 4GB of memory, and a modern dual-core processor for a city-sized region to 300GB+ of fast storage, 24GB of memory, and a quad-core processor for the entire planet.
+# Системні вимоги
 
-We would recommend that you begin with extracts of OpenStreetMap data – for example, a city, county or small country – rather than spending a week importing the whole world (planet.osm) and then having to restart because of a configuration mistake! You can download extracts from:
+Обслуговування власних мап це доволі витратне завдання. В залежності від розміру території, яка вам потрібна та очікуваної кількості трафіка, вимоги до обладнання можуть змінюватись в широкому діапазоні. Переважно, вимагатиметься наявність сховища на 10-12 ГБ, 4 ГБ оперативної пам’яті, а також сучасного дво-ядерного процесора для середнього міста або більше 300 ГБ для сховища, 24+ ГБ оперативної пам’яті та не менш ніж чотири-ядерний процесор для всієї планети.
 
-* [Geofabrik](http://download.geofabrik.de/osm/) (countries and provinces)
-* [Protomaps Extracts](https://protomaps.com/extracts/) (minutely-updated cities and small countries)
+Ми радимо вам розпочати роботу з невеличких частин даних OpenStreetMap – з міста, району чи області. Це краще ніж витратити тиждень на імпорт всього світу (planet.osm) і потім почати все наново після виявлення помилки в налаштуваннях! Ви можете завантажити дані частинами з:
 
-# The toolchain
+*   [Geofabrik](http://download.geofabrik.de/osm/) (країни та регіони)
+*   [Protomaps Extracts](https://protomaps.com/extracts/) (щохвилинні оновлення міст та невеличких країн)
 
-We use a series of tools for generating and serving map tiles.
+# Інструментарій
 
-**Apache** provides the front end server that handles requests from your web browser and passes the request to mod_tile. The Apache web server can also be used to serve static web content like the HTML, JavaScript, or CSS for your map webpage.
+Ми використовуємо набір інструментів для створення та обслуговування тайлів.
 
-Once Apache handles the request from the web user, it passes the request to mod_tile to deal with. Mod_tile checks if the tile has already been created and is ready for use or whether it needs to be updated due to not being in the cache already. If it is already available and doesn’t need to be rendered, then it immediately sends the tile back to the client. If it does need to be rendered, then it will add it to a “render request” queue, and when it gets to the top of the queue, a tile renderer will render it and send the tile back to the client.
+**Apache** – сервер, який обслуговує звернення від ваших веб-оглядачів та передає їх сервісу **mod_tile**. Крім цього веб-сервер Apache може використовуватись для обслуговування статичного веб-контенту, такого як HTML, JavaScript та CSS для вашої сторінки з мапою.
 
-We use a tool called **Mapnik** to render tiles. It pulls requests from the work queue as fast as possible, extracts data from various data sources according to the style information, and renders the tile. This tile is passed back to the client and moves on to the next item in the queue.
+Після надходження від користувача запиту Apache направляє запит до mod_tile для подальшої обробки. Mod_tile перевіряє, чи тайл вже створено і він готовий до використання або він вимагає оновлення через його відсутність в кеші. Якщо тайл доступний і не потребує створення, він негайно надсилається клієнту. У випадку потреби у його створені, тайл додається в “чергу генерації”, і коли він потрапляє на її початок, процес генерації тайлів (рендер) створює його та надсилає клієнту.
 
-For rendering, OpenStreetMap data is stored in a **PostgreSQL** database created by a tool called **osm2pgsql**. These two pieces work together to allow efficient access to the OpenStreetMap geographic data. It is possible to keep the data in the PostgreSQL database up to date using a stream of diff files produced every 60 seconds on the main OpenStreetMap server.
+Для створення тайлів ми використовуємо інструмент з назвою **Mapnik**. Він отримує запити з черги у найшвидший спосіб, витягує дані із різноманітних джерел, відповідно до інформації про стиль, та генерує тайли. Тайл надсилається до клієнта, а Mapnik переходить до наступного запису в черзі.
+
+Для потреб генерації тайлів, дані OpenStreetMap зберігаються в базі даних, яка обслуговується сервером баз даних **PostgreSQL**. Для переміщення даних в базу використовується **osm2pgsql**. Ці два інструменти працюють разом щоб в ефективний спосіб отримувати геопросторові дані OpenStreetMap. Ви можете підримувати актуальність вашої бази даних PostgreSQL користуючись потоком diff-файлів, які створюються кожні 60 секунд на сервері OpenStreetMap.
