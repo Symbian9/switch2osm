@@ -1,60 +1,72 @@
 ---
 layout: docs
-title: Using a Docker container
+title: Використання контейнера Docker
 permalink: /serving-tiles/using-a-docker-container/
 ---
 
-If you just want to try things out or you're using an OS other than Ubuntu, and you're using Docker for containerisation, you can try [this](https://github.com/Overv/openstreetmap-tile-server/blob/master/README.md).  It's based on the instructions [here](https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/), but is a pre-built container you can install.
+Якщо ви тільки бажаєте потестувати або ви використовуєте іншу операційну сиистему (відмінну від Ubuntu), або ви вже використовуєте Docker для контейнеризації – ви можете спробувати [цю інструкцію](https://github.com/Overv/openstreetmap-tile-server/blob/master/README.md).  Вона базується на інструкції [звідси]({{site.baseurl}}/serving-tiles/manually-building-a-tile-server-18-04-lts/) і вже має готовий до використання контейнер.
 
 # Docker
 
-If you don't already have Docker installed, there are lots of "how-tos" around - see for example [here](https://www.openstreetmap.org/user/SomeoneElse/diary/45070) and the links from there.
+Якщо у вас ще не встановлено Docker, ви можете скористатись різноманітними порадами щодо його встановлення, наприклад, [одна з них в щодинниках OSM](https://www.openstreetmap.org/user/SomeoneElse/diary/45070), що посилається на це керівництво.
 
-# OpenStreetmap Data
+# Дані OpenStreetmap
 
-In this example run-through I’ll download data for Zambia and import it, but any OSM .pbf file should work.  For testing, try a small .pbf first.  When logged in as the non-root user that you run Docker from, download the data for Zambia:
+Для демонстрації тут, завантажимо дані для Замбії та імпортуємо їх, але має спрацювати будь-який файл OSM .pbf. Для тесту спробуйте якийсь невеликий файл .pbf, для початку. Увійдіть з правами звичайного користувача до вашої системи та завантажте дані для Замбії:
 
-    cd
-    wget http://download.geofabrik.de/africa/zambia-latest.osm.pbf
+```sh
+cd
+wget http://download.geofabrik.de/africa/zambia-latest.osm.pbf
+```
 
-Create a docker volume for the data:
+Створіть docker volume для даних  :
 
-    docker volume create openstreetmap-data
+```sh
+docker volume create openstreetmap-data
+```
 
-And install it and import the data:
+Встановіть контейнер та імпортуйте дані:
 
-    time docker run -v /home/renderaccount/zambia-latest.osm.pbf:/data.osm.pbf -v openstreetmap-data:/var/lib/postgresql/10/main overv/openstreetmap-tile-server import
+```sh
+time docker run -v /home/renderaccount/zambia-latest.osm.pbf:/data.osm.pbf -v openstreetmap-data:/var/lib/postgresql/10/main overv/openstreetmap-tile-server import
+```
 
-The path to the data file needs to be the absolute path to the data file - it can't be a relative path.  In this example it's in the root directory of the "renderaccount" user.
+Шлях до файлу даних має бути абсолютним шляхом. В цьому прикладі це домашня тека нашого користувача "renderaccount".
 
-How long this takes depends very much on the local network speed and the size of the area that you are loading. Zambia, used in this example, is relatively small.
+Як довго це триватиме – залежить від швидкості вашого з’єднання з мережею та розміру ділянки для завантаження. Замбія, яку ми обрали для прикладу, має досить не багато даних.
 
-Note that if something goes wrong the error messages may be somewhat cryptic - you might get “… is a directory” if the data file isn’t found. The “time” at the start of the command isn’t necessary for the installation and import; it just tells you how long it took for future reference.
+Зауважте, якщо щось пійде не так, повідомлення про помилки можуть бути трохи загадковими; ви можете побачити “… is a directory” якщо файл з даними не буде знайдений. Команда “time” на початку рядка не є обов’язковою, вона лише повідомить вам як довго тривав процес, щоб ви мали уявлення про це на майбутнє.
 
-For more details about what it’s actually doing, have a look at [this file](https://github.com/Overv/openstreetmap-tile-server/blob/master/Dockerfile). You’ll see that it closely matches the “manually building a tile server” instructions [here](https://switch2osm.org/serving-tiles/manually-building-a-tile-server-18-04-lts/), with some minor changes such as the tile URL and the internal account used. Internally you can see that it’s using Ubuntu 18.04, though you don’t need to interact with that directly.
+Для отримання докладної інформації про те, що на справді відбуватиметься, ознайомтесь з файлом [опису контейнера](https://github.com/Overv/openstreetmap-tile-server/blob/master/Dockerfile). Ви побачите, що він дуже схожий на інструкцію з “[розгортання тайлового сервера вручну]({{site.baseurl}}/serving-tiles/manually-building-a-tile-server-18-04-lts/)”, з незначними змінами, такими як URL для тайлів та використання внутрішнього облікового запису. Ви можете побачити що в середині контейнера використовується Ubuntu 18.04, хоча вам і не треба взаємодіяти з системою безпосередньо.
 
-When the import is complete you should see something like this:
+Після завершення імпорту ви маєте побачити повідомлення подібне до цього:
 
-    Osm2pgsql took 568s overall
+```sh
+Osm2pgsql took 568s overall
 
-    real    9m34.378s
-    user    0m0.030s
-    sys     0m0.060s
+real    9m34.378s
+user    0m0.030s
+sys     0m0.060s
+```
 
-That tells you how long things took in total (in this case 9.5 minutes). 
+Тут повідомляється скільки часу тривав імпорт (в цьому випадку 9 з половиною хвилин).
 
-To start the tile server running:
+Для запуску тайлового сервера скористайтесь командою:
 
-    docker run -p 80:80 -v openstreetmap-data:/var/lib/postgresql/10/main -d overv/openstreetmap-tile-server run
+```sh
+docker run -p 80:80 -v openstreetmap-data:/var/lib/postgresql/10/main -d overv/openstreetmap-tile-server run
+```
 
-and to check that it’s working, browse to:
+та перевірте че він працює відкривши посилання:
 
-    http://your.server.ip.address/tile/0/0/0.png
+```
+http://адреса.вашого.сервера/tile/0/0/0.png
+```
 
-You should see a map of the world in your browser.
+Ви маєте побачити мапу світу у вашому оглядачі.
 
-## Viewing tiles
+## Перегляд тайлів
 
-For a simple “slippy map” we can use an html file “sample_leaflet.html” which is [here](https://github.com/SomeoneElseOSM/mod_tile/blob/switch2osm/extra/sample_leaflet.html) in mod_tile’s “extra” folder. Edit “hot” in the URL in that file to read “tile”, and then just open that file in a web browser on the machine where you installed the docker container. If that isn’t possible because you’re installing on a server without a local web browser, you’ll also need to edit it to replace “127.0.0.1” with the IP address of the server and copy it to below “/var/www/html” on that server.
+Для перегляду простої “рухомої мапи” скористаємось файлом “[sample_leaflet.html](https://github.com/SomeoneElseOSM/mod_tile/blob/switch2osm/extra/sample_leaflet.html)”, який знаходиться в теці “extra” mod_tile’а. Змініть “hot” в URL у файлі на “tile”, і відкрийте його в оглядачі на комп’ютері де встановлено контейнер docker. Якщо це не можливо через відсутність встановленного веб-оглядача, вам доведеться замінити у файлі “127.0.0.1” на IP адресу сервера та скопіювати його в “/var/www/html” на на цьому сервері.
 
-If you want to load a different area, just repeat the process from “wget” above. It’ll be quicker the next time because the static data needed by the map style won’t be needed.
+У разі потреби завантаження іншої території, повторіть процес від завантаження даних з допомогою “wget” і далі. Це буде трохи швидше наступного разу, бо статичні дані для стилю вже в наявності і їх не треба завантажувати.
