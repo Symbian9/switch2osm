@@ -22,7 +22,7 @@ exclude:
 menu:
   - title: Навіщо?
     url: /why-switch/
-  - title: Відгуки
+  - title: Вже з OSM
     url: /case-studies/
   - title: Основи
     url: /the-basics/
@@ -30,7 +30,7 @@ menu:
     url: /using-tiles/
   - title: Власний сервер
     url: /serving-tiles/
-  - title: Що ще?
+  - title: Інше
     url: /other-uses/
   - title: Постачальники
     url: /providers/
