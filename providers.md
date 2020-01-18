@@ -1,33 +1,33 @@
 ---
 layout: page
-title: Providers
+title: Постачальники
 permalink: /providers/
 ---
 
-## Development services and consulting
+## Послуги з розробки та надання консультацій
 
-The following companies offer development services and consulting for sites wishing to switch to OpenStreetMap.
+Компанії з цього переліку пропонують розробку сервісів та надання консультацій для сайтів, що бажають перейти на OpenStreetMap.
 
-* [AND Automotive Navigation Data](https://www.and.com/services-3/map-hosting/), Netherlands
-* [Camptocamp](https://camptocamp.com/), Switzerland
-* [Carto](https://carto.com/), US
-* [Geofabrik](https://www.geofabrik.de/), Germany
-* [GreenInfo Network](https://www.greeninfo.org/), US (public interest groups only)
-* [ITO!](https://www.itoworld.com/), UK
-* [Jawg](https://www.jawg.io/), France
-* [Mapbox](https://www.mapbox.com/), US
-* [MapTiler](https://www.maptiler.com/), Switzerland
-* [Makina Corpus](https://makina-corpus.com/), France
-* [Skobbler](https://developer.skobbler.com/), Germany
-* [Stadia Maps](https://stadiamaps.com), US
-* [Stamen](https://www.stamen.com/), US
-* [Système D](https://www.systemeD.net/openstreetmap/ "OpenStreetMap consultancy by Richard Fairhurst"), UK
+*   [AND Automotive Navigation Data](https://www.and.com/services-3/map-hosting/), Netherlands
+*   [Camptocamp](https://camptocamp.com/), Switzerland
+*   [Carto](https://carto.com/), US
+*   [Geofabrik](https://www.geofabrik.de/), Germany
+*   [GreenInfo Network](https://www.greeninfo.org/), US (public interest groups only)
+*   [ITO!](https://www.itoworld.com/), UK
+*   [Jawg](https://www.jawg.io/), France
+*   [Mapbox](https://www.mapbox.com/), US
+*   [MapTiler](https://www.maptiler.com/), Switzerland
+*   [Makina Corpus](https://makina-corpus.com/), France
+*   [Skobbler](https://developer.skobbler.com/), Germany
+*   [Stadia Maps](https://stadiamaps.com), US
+*   [Stamen](https://www.stamen.com/), US
+*   [Système D](https://www.systemeD.net/openstreetmap/ "OpenStreetMap consultancy by Richard Fairhurst"), UK
 
-## Tile hosting
+## Хостинг тайлів
 
-The following companies host OpenStreetMap tiles.
+Наступні компанії пропонують тайли на основі даних OpenStreetMap.
 
-### Allows free usage
+### Дозволяється безкоштовне використання
 
 * [Carto](https://carto.com/), US
 * [Jawg](https://www.jawg.io/), France
@@ -39,7 +39,7 @@ The following companies host OpenStreetMap tiles.
 * [Stamen](https://stamen.com/), US
 * [Thunderforest](https://www.thunderforest.com), UK
 
-### Paid customers only
+### Тільки за плату
 
 * [AND Automotive Navigation Data](https://www.and.com/services-3/map-hosting/), Netherlands
 * [Geofabrik](https://www.geofabrik.de/maps/rendering.html), Germany
