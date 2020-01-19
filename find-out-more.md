@@ -1,42 +1,47 @@
 ---
 layout: page
-title: Find Out More
+title: Дізнатися більше
 permalink: /find-out-more/
 ---
 
-## Getting help
+## Отримання допомоги
 
-OpenStreetMap is a decentralised, volunteer-run project so there’s no single contact e-mail address for your queries. Instead, our community’s knowledge can help resolve any issues you might have.
+OpenStreetMap – децентралізований проєкт, який працює на волонтерських засадах, тож важко надати єдину адресу е-пошти для зв’язку. Натомість, знання всієї спільноти допоможуть вам розв’язати будь-яку проблему.
 
-* [OpenStreetMap IRC](http://irc.openstreetmap.org/) (Internet Relay Chat): 24-hour live OSM chat (use channel #osm or #osm-dev)
-* [Interactive help system](http://help.openstreetmap.org/)
-* [Developer FAQ](http://wiki.openstreetmap.org/wiki/Developer_FAQ)
-* [Main FAQ](http://wiki.openstreetmap.org/wiki/FAQ)
+*   [OpenStreetMap IRC](http://irc.openstreetmap.org/) (Internet Relay Chat): цілодобовий живий чат OSM (канали #osm або #osm-dev)
+*   [Інтерактивна довідкова платформа](http://help.openstreetmap.org/)
+*   [Часті питання для розробників](http://wiki.openstreetmap.org/wiki/Developer_FAQ)
+*   [Часті питання (загальні)](http://wiki.openstreetmap.org/wiki/FAQ)
 
-## Other tutorials on switching to OSM
-* [Using MapBox and Leaflet](http://developmentseed.org/blog/2012/jan/12/open-source-with-leaflet-and-mapbox/) (Development Seed)
-* [Kelso Cartography guide](https://github.com/nvkelso/geo-how-to/wiki)
-* [Build a server using MapServer](http://trac.osgeo.org/mapserver/wiki/RenderingOsmDataUbuntu)
+## Інші довідники щодо переходу на OSM
 
-## Editing OpenStreetMap
-* [LearnOSM.org](http://www.learnosm.org/) guide for beginners
+*   [Використання MapBox та Leaflet](http://developmentseed.org/blog/2012/jan/12/open-source-with-leaflet-and-mapbox/) (Development Seed)
+*   [Настанови по картографії від Kelso](https://github.com/nvkelso/geo-how-to/wiki)
+*   [Розгортаємо сервер з використанням MapServer](http://trac.osgeo.org/mapserver/wiki/RenderingOsmDataUbuntu)
 
-## Books
-* [OpenStreetMap: Using and Enhancing the Free Map of the World](http://openstreetmap.info/) (English/German)
-* [OpenStreetMap: Be Your Own Cartographer](https://www.packtpub.com/openstreetmap/book) (English)
-* [OpenStreetMap: A Beginner’s Guide](http://en.flossmanuals.net/openstreetmap/) (English/French)
-* [OpenLayers 2.10 Beginners Guide](https://www.packtpub.com/openlayers-2-1-javascript-web-mapping-library-beginners-guide/book) (English)
+## Редагування OpenStreetMap
 
-## Community resources
-* OpenStreetMap Foundation
-* Project wiki
-* Mailing lists (searchable archive)
+*   [LearnOSM.org](http://www.learnosm.org/uk/) – довідник початківця
 
-## Press enquiries
-Please contact the OSM Foundation’s Communications Working Group.
+## Книжки
 
-# About switch2osm
-Switch2osm is a community driven site coordinated by [Richard Fairhurst](http://www.systemed.net/) and [Paul Norman](http://www.paulnorman.ca/) with huge amounts of help from the OpenStreetMap community. You can [get involved on GitHub](https://github.com/switch2osm/switch2osm.github.io)
+*   [OpenStreetMap: Using and Enhancing the Free Map of the World](http://openstreetmap.info/) (English/German)
+*   [OpenStreetMap: Be Your Own Cartographer](https://www.packtpub.com/openstreetmap/book) (English)
+*   [OpenStreetMap: A Beginner’s Guide](http://en.flossmanuals.net/openstreetmap/) (English/French)
+*   [OpenLayers 2.10 Beginners Guide](https://www.packtpub.com/openlayers-2-1-javascript-web-mapping-library-beginners-guide/book) (English)
 
-Comments or suggestions? Please make contact via IRC at the first instance.
+## Ресурси спільноти
 
+*   [Фундація OpenStreetMap](https://wiki.osmfoundation.org/wiki/Main_Page)
+*   [Вікі OpenStreetMap](https://wiki.openstreetmap.org/wiki/Uk:Main_Page)
+*   [Списки розсилки](https://lists.openstreetmap.org/listinfo) (з можливістю пошуку)
+
+## Для ЗМІ
+
+Зверніться до [Робочої групи з комунікацій](https://wiki.osmfoundation.org/wiki/Communication_Working_Group) Фундації OpenStreetMap.
+
+# Про switch2osm
+
+Switch2osm – це сайт, керований спільнотою, який координується Річардом Ферхерстом ([Richard Fairhurst](http://www.systemed.net/)) та Полом Норманом ([Paul Norman](http://www.paulnorman.ca/)) з допомогою спільноти OpenStreetMap. Ви також можете взяти участь у покращенні цього сайту на [GitHub](https://github.com/switch2osm/switch2osm.github.io) (англ. версія). Переклад українською виконано українською спільнотою. Виправлення помилок, пропозиції щодо покращення тексту завжди вітаються, чекаємо їх також на [GitHub](https://github.com/osm-ua/switch2osm) (osm-ua).
+
+Маєте пропозиції або коментарі? Зв’яжіться з авторами в IRC. Бажаєте поспілкуватись з українською спільнотою: звертайтесь на [форум](https://forum.openstreetmap.org/viewforum.php?id=40), в [Телеграм](t.me/osmUA) або [Slack](http://bit.ly/SlackOsmUa).
