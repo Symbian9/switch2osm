@@ -4,7 +4,7 @@ title: Використання контейнера Docker
 permalink: /serving-tiles/using-a-docker-container/
 ---
 
-Якщо ви тільки бажаєте потестувати або ви використовуєте іншу операційну сиистему (відмінну від Ubuntu), або ви вже використовуєте Docker для контейнеризації&nbsp;– ви можете спробувати [цю інструкцію](https://github.com/Overv/openstreetmap-tile-server/blob/master/README.md).  Вона базується на інструкції [звідси]({{site.baseurl}}/serving-tiles/manually-building-a-tile-server-18-04-lts/) і вже має готовий до використання контейнер.
+Якщо ви тільки бажаєте потестувати або ви використовуєте іншу операційну систему (відмінну від Ubuntu), або ви вже використовуєте Docker для контейнеризації&nbsp;– ви можете спробувати [цю інструкцію](https://github.com/Overv/openstreetmap-tile-server/blob/master/README.md).  Вона базується на інструкції [звідси]({{site.baseurl}}/serving-tiles/manually-building-a-tile-server-18-04-lts/) і вже має готовий до використання контейнер.
 
 # Docker
 
