@@ -1,53 +1,57 @@
 # switch2osm #
 
-This repository is the content for switch2osm.org.
+Цей репозиторій містить матеріали для osm-ua.github.io/switch2osm/. Вони є результатом перекладу українською матеріалів основного, англомовного репозиторію. (Див. також [README.origin.md](README.origin.md))
 
-See the issues for things to work on.
+Ознайомтесь з питаннями які ми намагались висвітлити.
 
-## Content principles ##
+## Вимоги до змісту ##
 
-* Covers from first principles to technical how-tos.
+*   Висвітлення від базових понять до технічних покрокових настанов.
 
-  It's easy to be focused on technical guides (setting up a rendering server), but most users are more interested in how to switch their very small website from Google, so care more about how the monolithic Google Maps "API" is replaced by multiple components, and how to set up their webpage to use a free tile service.
+    Зосередитись на технічному боці справи (налаштування сервера рендерінгу) легко, але більшість користувачів більше зацікавлені в тому, як перейти на своєму дуже маленькому веб-сайті від Google на OSM, тому більше дбайте про те, як кількома компонентами замінити монолітний API Google Maps та як налаштувати веб-сторінку, щоб використовувати безкоштовні послуги отримання тайлів.
 
-* Avoids lock-in with specific vendors or services
-* Does not require specific external services, aside from OpenStreetMap itself
+*   Не зациклюйтесь на якомусь одному рішенні чи постачальнику послуг.
 
-  We do not promote anything which can result in lock-in to a specific vendor, so guides need to be usable without relying on a third party. It's okay to use something as an example (e.g. tile.osm.org) where there are plenty of alternatives, but not if there are few alternatives or the service being used cannot be reproduced.
+*   Не вимагайте якихось особливих зовнішніх служб, окрім самого OpenStreetMap.
 
-  Exceptions are
-  * planet.openstreetmap.org, for OSM data itself
-  * openstreetmapdata.com, for coastlines and other preprocessed data
-  * Natural Earth and other well-used public data sources
+    Ми не рекламуємо щось, що може призвести до залежності від послуг якогось одного постачальника, тож настанови мають бути корисними без прив’язки до сторонніх сервісів. Добре надати приклад (це може бути tile.osm.org) у якого є багато альтернатив, на відміну від якогось безальтернативного рішення, або чогось такого, що складно відтворити.
 
-## Content technical needs ##
+    Винятки:
+    *   planet.openstreetmap.org, для даних OSM
+    *   openstreetmapdata.com, для берегових ліній та інших готових даних
+    *   Natural Earth та інші широко відомі публічні джерела даних
 
-* Uses multiple steps to build understanding, rather than one shell script
+## Технічні вимоги ##
 
-  A single script which completes a long series of tasks can be useful, but builds no understanding of what is being done. As soon as someone wants to change the slightest aspect, they find they haven't gained any knowledge. These scripts also tend to be fragile.
+*   Використовуйте покрокові пояснення, замість однорядкових сценаріїв shell.
 
-* Does not present bad practices, even in a demo
+    Один сценарій, який виконує довгу серію завдань, може бути корисним, але не надає розуміння того, що відбувається. Як тільки хтось хоче змінити найменший аспект, виявиться, що особа не здобула ніяких знань. Ці сценарії також, як правило, легко псуються.
 
-  People will copy/paste short demos. Don't use bad practices that work just because the demo is simple.
+*   Не пропонуйте неякісні варіанти, навіть у демонстраціях.
 
-* Avoids building from source
+    Люди будуть намагатись повторити короткі демо. Не використовуйте погані практики, які навіть працюють, лиш тому що це просте демо.
 
-  Building from source adds significant complications while helping little with understanding.
+*   Намагайтесь уникати збирати щось з сирців.
 
-* Avoids binary blobs that cannot be reproduced
+    Збирання чогось із сирців привносить лиш додаткову складність на допомагаючи зрозуміти що відбувається.
 
-  The instructions should be able to be adapted to other OSes or distributions. This means that the user should be able to build from source if they need to. OS packaging systems and PPAs meet this.
+*   Уникайте бінарних вставок, які важко відтворити.
 
-* Uses forwards-compatible portable instructions
+    Інструкції повинні адаптуватися до інших ОС або дистрибутивів. Це означає, що користувач повинен мати можливість будувати з джерела, якщо це потрібно. Системи пакування ОС та PPA відповідають цьому.
 
-  This is hard to do, but instructions should be crafted to work in the future, and to the extent possible, on future distributions. e.g. use output of config programs rather than hardcoding paths.
+*   Використовуйте інструкції, які можна легко переносити з платформи на платформу та адаптувати під майбутні зміни.
 
-* Uses OS distribution methods for software when possible
+    Це важко зробити, але інструкції повинні бути придатні для роботи в майбутньому, наскільки це можливо, щодо майбутніх дистрибутивах, чи, наприклад, використовувати результати роботи конфігураційних сценаріїв, а не жорстко прописані шляхи.
 
-  Use apt-get or homebrew. With PPAs, it should be possible to get all software installed this way.
+*   Використовуйте засоби розповсюдження програмного забезпечення, що використовуються операційними системами, якщо це можливо.
 
-## Contribute
-The webpage is built using [GitHub Pages](https://pages.github.com/). To compile your changes, execute
-* `bundle install --path .vendor/bundle`
-* `bundle exec jekyll serve`
-and open http://127.0.0.1:4000/ in the browser
+    Використовуйте apt-get чи homebrew. Також за допомогою PPA, має бути можливо встановити все програмне забезпечення подібним чином.
+
+## Співробітництво ##
+
+Веб-сторінки побудовані за допомогою [GitHub Pages](https://pages.github.com/). Для перегляду ваших змін виконайте наступні команди:
+
+*   `bundle install --path .vendor/bundle`
+*   `bundle exec jekyll serve`
+
+та відкрийте у вашому оглядачі посилання <http://127.0.0.1:4000/>
