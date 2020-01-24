@@ -1,27 +1,33 @@
 ---
 layout: docs
-title: Using Tiles
+title: Використання тайлів
 permalink: /using-tiles/
 ---
 
-You can switch a website to OpenStreetMap in under an hour. Choose a JavaScript API and a tile provider, and you’re ready to go. Then, as your needs increase, you can consider custom tiles, either from a specialist provider or generated yourself.
+Ви можете перейти на використання OpenStreetMap на вашому сайті менше ніж за годину. Оберіть JavaScript API та постачальника тайлів, перед тим як розпочати. Потім, зі зростанням потреб, можете подумати про використання власних тайлів, що відповідають необхідним вимогам, використовуючи спеціалізовані сервіси від сторонніх постачальників, або створюючи тайли самостійно.
 
-## Choosing an API/library
+## Вибір API/бібліотеки
 
-Unlike commercial online map providers, OpenStreetMap does not provide an “official” JavaScript library which you are required to use. Rather, you can use any library that meets your needs. The most popular is Leaflet, an open-source library. OpenLayers 3, another well know library, can also be a good fit.
+На противагу комерційним постачальникам мап, OpenStreetMap не вимагає використання якоїсь “офіційної” бібліотеки JavaScript. Натомість, маєте можливість використовувати саме ту бібліотеку, яка відповідає безпосередньо вашим потребам. Найпопулярніша бібліотека&nbsp;– Leaflet, бібліотека з відкритими сирцями, створена в Україні. OpenLayers 3&nbsp;– інша широко відома бібліотека, що також може бути гарним вибором.
 
-[Getting started with Leaflet – a light web maps library](/using-tiles/getting-started-with-leaflet/)
+[Використання Leaflet&nbsp;– легковісна бібліотека для веб-мап]({{site.baseurl}}/using-tiles/getting-started-with-leaflet/)
 
-[Getting started with Openlayers –  a full feature library for web maps](/using-tiles/getting-started-with-openlayers/)
+[Використання Openlayers&nbsp;– повнофункціональна бібліотека для веб-мап]({{site.baseurl}}/using-tiles/getting-started-with-openlayers/)
 
-## Choosing a tile provider
+## Вибір постачальника тайлів
 
-Apart from very limited testing purposes, you should not use the tiles supplied by OpenStreetMap.org itself. OpenStreetMap is a volunteer-run non-profit body and cannot supply tiles for large-scale commercial use. Rather, you should use a third party provider that makes tiles from OSM data, or generate your own.
+Окрім дуже обмежених випадків для тестування ваших рішень, не варто використовувати тайли безпосередньо з OpenStreetMap.org. OpenStreetMap&nbsp;– є волонтерським неприбутковим проєктом, який не в змозі постачати тайли великим комерційним проєктам. Тому радимо скористатись послугами сторонніх постачальників тайлів, створених з даних OpenStreetMap, або згенерувати ваші власні. [^1]
 
-### Free providers:
+### Безкоштовні тайли:
 
-You can get a list using the project [Leaflet-provider](http://leaflet-extras.github.io/leaflet-providers/preview/) preview although some of them are not free (require an API key).
+Можете отримати перелік доступних тайлів за допомогою попереднього перегляду в проєкті [Leaflet-provider](http://leaflet-extras.github.io/leaflet-providers/preview/), зверніть увагу на те, що деякі з них не є вільними (вимагається наявність ключа доступу до API).
 
-### Paid-for providers: see list.
+### Постачальники платних тайлів: дивись перелік.
 
-Or go on to find out how to generate and serve your own tiles.
+Або ж дізнайтесь про те, як самостійно створити тайли для власного використання.
+
+---
+
+[^1]: Українська спільнота OpenStreetMap використовує векторні тайли Mapbox на [openstreetmap.org.ua/#map][437f1ff0]
+
+  [437f1ff0]: https://openstreetmap.org.ua/#map "Мапа на сайті openstreetmap.org.ua"

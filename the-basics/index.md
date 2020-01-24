@@ -1,47 +1,48 @@
 ---
 layout: page
-title: The Basics
+title: Основи
 permalink: /the-basics/
 ---
 
-# The challenge
-Your current map provider gives you two things:
+# Завдання
+Ваш поточний постачальник мап надає вам дві речі:
 
-* A set of ’tiles’ (square map images) that are placed together to make the map
-* A JavaScript API, or equivalent library for mobile apps, to view them
+*   Набір ‘тайлів’ (квадратних шматочків із зображенням), які складуються в мапу
+*   JavaScript API, або подібну бібліотеку для мобільних застосунків, щоб переглядати їх
 
-To switch to OpenStreetMap, you’ll need to replace both of these.
+Для переходу на OpenStreetMap, треба замінити їх обидві.
 
-# The tiles
+# Тайли
 
 ![Tiles](tiles.png)
-The map tiles, images of (usually) 256 x 256 pixels each, are drawn (“rendered”) from a map database.
+Тайли мапи, це картинки (зазвичай) розміром 256 x 256 пікселів кожна, які створені (“згенеровані”) з бази даних мапи.
 
-If you currently use Google Maps, you’ll be using Google’s map tiles, hosted at google.com. Because the OpenStreetMap Foundation is a non-profit organisation with limited resources, you can’t just slot in the tiles from openstreetmap.org as a replacement (see the [Tile Usage Policy](https://operations.osmfoundation.org/policies/tiles/)). Instead, you can:
+Якщо ви вже використовуєте Карти Google, ви, скоріш за все, отримуєте тайли карт Google з сайту google.com. Оскільки Фонд OpenStreetMap&nbsp;– це неприбуткова організація з обмеженими ресурсами, ви не можете просто замінити тайли, які ви використовували, на тайли з openstreetmap.org (див. [Правила використання тайлів](https://wiki.openstreetmap.org/wiki/Uk:Правила_використання_тайлів)). Натомість, ви можете:
 
-* Generate your own tiles, by downloading the free OSM map database and rendering them;
+*   Створити ваші власні тайли, завантаживши вільні дані з бази OSM та виконавши процес генерації тайлів (рендерінг);
 
-* Or use a third-party supplier (some of whom charge, some are free)
+*   Скористатись послугами інших (хтось бере за це гроші, а хтось&nbsp;– ні)
 
-The OSM map database is called planet.osm. The full database and regular update files are both available at [planet.openstreetmap.org](http://planet.openstreetmap.org/).
+База даних OSM називається planet.osm. Повний набір даних та регулярні оновлення доступні на [planet.openstreetmap.org](http://planet.openstreetmap.org/).
 
-Rendering your own tiles gives you complete control over their appearance. You can customise the maps to appear any way you like. Alternatively, third-party suppliers have OSM expertise and may have ready-prepared map styles that you can use.
+Створення ваших власних тайлів дає вам повний контроль над їх виглядом. Ви можете налаштувати вигляд мапи саме так, як треба вам. Або ж, ви можете скористатись послугами сторонніх постачальників тайлів, які мають досвід в їх створенні та можуть надати вам готові до використання мапи у різних стилях.
 
-# The API/library
+# API/бібліотека
 
-There is no single canonical library: you can choose whichever suits your needs best. The two most popular JavaScript libraries for displaying OSM tiles are:
+В OSM не існує єдиної канонічної бібліотеки, ви можете обрати ту, що найбільше відповідає вашим потребам. Двома найпопулярнішими бібліотеками JavaScript для показу тайлів OSM є:
 
-* OpenLayers – powerful and long-established
+*   OpenLayers&nbsp;– потужна та перевірена часом
 
-* Leaflet – lightweight and easy-to-learn
+*   Leaflet&nbsp;– легка та проста в освоєнні
 
-APIs are also available for mobile platforms, such as [Route-Me](https://github.com/route-me/route-me) (iOS) and [osmdroid](https://github.com/osmdroid/osmdroid) (Android).
+Також наявні API і для мобільних платформ, наприклад [Route-Me](https://github.com/route-me/route-me) (iOS) та [osmdroid](https://github.com/osmdroid/osmdroid) (Android).
 
-# The licence
-Unlike commercial providers’ data, OpenStreetMap is ‘open data’. The map data is available to you free-of-charge, with the freedom to copy and modify. OSM’s licence is the [Open Database Licence](http://opendatacommons.org/licenses/odbl/summary/).
+# Ліцензійні умови
 
-Your obligations are:
+На відміну від даних комерційних постачальників, OpenStreetMap&nbsp;– це ‘відкриті дані’. Дані мапи доступні для вас вільно (безкоштовно), ви можете копіювати їх та змінювати. Дані OSM розповсюджуються на умовах Ліцензії ODbL ([Open Database Licence](http://opendatacommons.org/licenses/odbl/summary/)).
 
-* Attribution. You must credit OpenStreetMap with the same prominence that would be expected if you were using a commercial provider. See [OSM’s copyright guidelines](http://www.openstreetmap.org/copyright).
+Використовуючи дані OpenStreetMap ви зобов’язуєтесь:
 
-* Share-Alike. When you use any adapted version of OSM’s map data, or works produced with it, you must also offer that adapted database under the ODbL.
+*   Вказувати авторство (атрибуція). Ви повинні посилатись на OpenStreetMap, тим самим чином, як це можна було б очікувати, якби ви користувалися послугами комерційного постачальника. Дивіться [Настанови OSM про зазначення авторства](http://www.openstreetmap.org/copyright).
+
+*   Розповсюджувати похідні дані на подібних умовах (Share-Alike). Якщо ви використовуєте будь-яку модифіковану версію даних OpenStreetMap, або працюєте з ними, ви також повинні надавати ці адаптовані дані на умовах ODbL.

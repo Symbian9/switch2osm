@@ -1,29 +1,29 @@
 ---
 layout: page
-title: Case Studies
+title: Досвід використання
 permalink: /case-studies/
 ---
 
 ## Nestoria.com
 
-> “OSM maps are of equal or better quality than any other widely available mapping service. There is now a solid set of tools and services around OSM that made the switch possible. It all added up to a compelling sense that now was the time to switch.”
+> “Мапи OSM мають таку ж або кращу якість, як і будь-який інший широко доступний картографічний сервіс. В даний час навколо OSM існує солідний набір інструментів та сервісів, які роблять перехід можливим. Все це викликає переконливе відчуття, що зараз настав час для переходу.”
 
-Read [Nestoria’s story of switching from Google Maps to OpenStreetMap](http://blog.nestoria.co.uk/post/43883369968/why-and-how-weve-switched-away-from-google-ma).
+Ознайомтесь з [історією переходу Nestoria на OpenStreetMap з Google Maps](http://blog.nestoria.co.uk/post/43883369968/why-and-how-weve-switched-away-from-google-ma).
 
 ## StreetEasy.com
 
-> “We at StreetEasy decided to build our own maps using, among other tools, OpenStreetMap, TileMill, MapBox and Leaflet, instead of paying hundreds of thousands of dollars per year to Google. And yes, the money pushed us into doing it, but we’re happier with the result because we now control the contents of our maps.”
+> “Ми в StreetEasy вирішили створити власні мапи, використовуючи, серед інших інструментів, OpenStreetMap, TileMill, MapBox та Leaflet, замість того, щоб не платити Google сотні тисячі тисяч доларів на рік. Так, гроші підштовхнули нас до цього, але ми щасливіші від результату, оскільки тепер повністю контролюємо вміст наших мап.”
 
-Read [StreetEasy’s story of switching from Google Maps to OpenStreetMap](https://plus.google.com/u/0/118383351194421484817/posts/foj5A1fURGt).
+Ознайомтесь з [історією переходу StreetEasy на OpenStreetMap з Google Maps](https://medium.com/devseed/streeteasy-makes-the-switch-to-mapbox-from-google-3784c10a041f).
 
 ## Fubra
 
-> “The most popular source of map tile data out there is OpenStreetMap; we also found that, in some places, it’s updated more frequently than Google Maps thanks to the open community that a few of us at Fubra have already contributed to. Open MapQuest uses data from OpenStreetMap but adds its own style to the maps that we think looks better than Google’s. And the other thing is it’s free!”
+> “Найпопулярніше джерело даних тайлів мап&nbsp;— OpenStreetMap; ми також виявили, що в деяких місцях вона оновлюється частіше, ніж Google Maps завдяки відкритій спільноті, до якої вже дехто хто з нас у Fubra приєднався. Open MapQuest використовує дані з OpenStreetMap, але додає власний стиль до мап, які, на наш погляд, виглядають краще, ніж Google. А також&nbsp;— це безкоштовно!”
 
-Read [Fubra’s story of switching from Google Maps to OpenStreetMap](http://www.fubra.com/blog/2011/11/24/google-maps-free-alternatives/).
+Ознайомтесь з [історією переходу Fubra на OpenStreetMap з Google Maps](http://www.fubra.com/blog/2011/11/24/google-maps-free-alternatives/).
 
 ## Flickr
 
-> “A fantastic project called OpenStreetMap – a free, editable map of the world, made by the people in it. What an exciting prospect to be able to see maps that are alive and have been lovingly created by citizen cartographers all over the world. What an even more exciting prospect to be able to display those maps in Flickr! We racked our brains for a place that we knew we didn’t have a very good street-level resolution for, and had something going on there right now… The 2008 Summer Olympic Games! They just kicked off in Beijing!”
+> “Фантастичний проєкт, який називається OpenStreetMap&nbsp;— це безкоштовна мапа світу, редагувати яку може кожен, зроблена людьми що беруть участь в проєкті. Яка захоплива перспектива мати змогу побачити живі мапи, створені завзятими маперами по всьому світу. Яка захоплива перспектива мати змогу використовувати ці мапи у Flickr! Ми божеволіли в пошуках мап для місця, про яке ми знали, що у нас не дуже гарні мапи з масштабом на рівні вулиць, і там щось відбувається прямо зараз … Літні Олімпійські ігри 2008 року! Вони вже розпочалися в Пекіні!”
 
-Read [Flickr’s reasons for using OpenStreetMap](http://blog.flickr.net/en/2008/08/12/around-the-world-and-back-again/).
+Ознайомтесь з [причинами, що спонукали Flickr скористатися OpenStreetMap](http://blog.flickr.net/en/2008/08/12/around-the-world-and-back-again/).
