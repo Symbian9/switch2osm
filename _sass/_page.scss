@@ -574,12 +574,13 @@ ul.social-buttons li a:active {
 		color: $primary;
 		font-size: 24px;
 	    padding-left: 10px;
-		display: none;
+		display: table-cell;
 		vertical-align: middle;
 		height: $menu-height;
-		@media #{$medium}{
-			display: table-cell;
-		}
+		// logo for all media-size
+		// @media #{$medium}{
+		//	display: table-cell;
+		//}
 		&:hover {
 		 color: inherit;
 		}
