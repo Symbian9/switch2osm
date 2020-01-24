@@ -720,11 +720,16 @@ ul.social-buttons li a:active {
 			 width: 30%;
 			 margin-left: auto;
 			   padding: 150px 0;
-				 @media(max-width: #{ $sc-small}){
+				@media(max-width: #{ $sc-small}){
 					 width: 100%;
 					 padding: 100px 0;
 					 margin-left: 10px;
 				 }
+				@media #{$medium}{
+					width: 40%;
+					margin-left: auto;
+			   		padding: 75px 0 20px 0;
+				}
 			 h1{
 				 font-size: 50px;
 				 margin-bottom: 0;
