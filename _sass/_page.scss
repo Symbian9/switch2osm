@@ -740,7 +740,7 @@ ul.social-buttons li a:active {
 				margin-left: 10px;
 
 			}
-			@media(max-width: #{ $medium}){
+			@media #{$medium}{
 				width: 40%;
 				margin-left: auto;
 			   	padding: 75px 0 20px 0;
