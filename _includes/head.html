@@ -43,10 +43,11 @@
 <!-- Load Modernizr -->
 <script type="text/javascript" src="{{ site.baseurl }}/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
 
+{% if site.google_analytics %}{% include google_analitics.html %}{% endif %}
 {% include icons.html %}
 
 {% if page.image.background or site.background %}
 {% capture background %}{% if page.image.background %}{{ page.image.background }}{% else %}{{ site.background }}{% endif %}{% endcapture %}
-{% unless background contains 'http://' or background contains 'https://' %}{% capture background %}{{ site.baseurl }}/images/{{ background }}{% endcapture %}{% endunless %}
+{% unless background contains 'http://' or background contains 'https://' %}{% capture background %}{{ site.baseurl }}/{{ background }}{% endcapture %}{% endunless %}
 <style type="text/css">body {background-image:url({{ background }});}</style>
 {% endif %}

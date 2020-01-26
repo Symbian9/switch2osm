@@ -5,7 +5,9 @@ description: >
 baseurl: "/switch2osm" # the subpath of your site, e.g. /blog
 copyright: 2013–2020 OpenStreetMap та його учасникі, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA</a>
 url: ""
+background: assets/img/body-bg-uk.png
 github_username: osm-ua
+google_analytics: UA-64679388-3
 
 # Build settings
 markdown: kramdown
