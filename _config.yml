@@ -2,7 +2,7 @@ title: Switch2OSM
 description: >
   Переходьте на OpenStreetMap та дізнайтесь як ви можете робити чудові мапи
   з найповніших даних, зібраних по всьому світу.
-baseurl: "/switch2osm" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /switch2osm
 copyright: 2013–2020 OpenStreetMap та його учасникі, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA</a>
 url: ""
 background: assets/img/body-bg-uk.png
